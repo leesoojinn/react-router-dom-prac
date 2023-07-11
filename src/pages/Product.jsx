@@ -81,11 +81,16 @@ export default function Product() {
               value={selectedOption}
               onChange={handleOptionChange}
             >
-              {/* 옵션를 index로 가져오기 */}
               <option value="">선택하세요</option>
-              <option>{product.옵션[0]}</option>
+              {product.옵션.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+              {/* 옵션를 index로 가져오기 */}
+              {/* <option>{product.옵션[0]}</option>
               <option>{product.옵션[1]}</option>
-              <option>{product.옵션[2]}</option>
+              <option>{product.옵션[2]}</option> */}
             </select>
             {/* 옵션에서 고른 것 화면에 보이기!! */}
             <div>구매옵션: {selectedOption} </div>
