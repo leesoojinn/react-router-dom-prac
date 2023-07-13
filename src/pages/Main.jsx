@@ -67,6 +67,7 @@ export default function Main() {
             {products.map((item) => {
               return (
                 <div
+                  key={item.이름}
                   style={{
                     width: "200px",
                     height: "240px",
